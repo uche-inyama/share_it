@@ -1,10 +1,12 @@
 <%= form_for @user do |f|%>
     <%= render 'shared/error_messages'%>
-    <%= f.label :email %>
-    <%= f.email_field :email %>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+
+    <%= f.label :fullname %>
+    <%= f.text_field :fullname %>
 
     <%= f.submit 'Sign Up'%>
 <% end %>
 <div><%= link_to 'Sign in', login_path %></div>
-<div><%= link_to 'Log out', logout_path, method: "delete"%></div>
 
