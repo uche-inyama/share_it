@@ -1,0 +1,10 @@
+<div class="opinion">
+    <div class="opinion_form">
+        <%= form_for(:opinion, url: opinion_foreign_path, class: "opinion_form") do |f|%>
+        <div class = "opinion_label">
+            tweet something
+        </div>
+        <%= f.text_field :text, class: "opinion_input"   %>
+        <% end %>
+    </div>
+</div>

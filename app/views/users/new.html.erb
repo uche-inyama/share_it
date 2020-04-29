@@ -6,6 +6,12 @@
     <%= f.label :fullname %>
     <%= f.text_field :fullname %>
 
+    <%= f.label :photo, 'Profile picture'%>
+    <%= f.file_field :photo, class: 'form-control', placeholder: 'Photo URL(optional)'%>
+
+    <%= f.label :coverimage, 'Cover image'%>
+    <%= f.file_field :coverimage, class: 'form-control', placeholder: "Cover URL (optional)"%>
+
     <%= f.submit 'Sign Up'%>
 <% end %>
 <div><%= link_to 'Sign in', login_path %></div>
