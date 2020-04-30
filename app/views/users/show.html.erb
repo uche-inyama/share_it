@@ -33,7 +33,25 @@
         </div>
     </div>
     <div class="right">
-        <div class = "profile_image"></div>
+        <div class = "profile_image">
+            <div class="profile-info-text">
+                <span class='profile-name'><%= @user.fullname %></span>
+            </div>
+            <div class="profile-user-info">
+                <div class="user-info-jlts user-info">
+                    <h5><%= @user.num_opinions %></h5>
+                    <p>Opinions</p>
+                </div>
+                <div class="user-info-following user-info">
+                    <h5><%= @user.num_following %></h5>
+                    <p>Following</p>
+                </div>
+                <div class="user-info-followers user-info">
+                    <h5><%= @user.num_followers %></h5>
+                    <p>Followers</p>
+                </div>
+            </div>
+        </div>
         <%= render './layouts/who_to_follow'%>
     </div>
 <div>
