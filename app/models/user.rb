@@ -25,15 +25,15 @@ class User < ApplicationRecord
     end
 
     def num_following
-        return 0 unless followers.any?
-    
-        followers.count
-      end
-    
-      def num_followers
         return 0 unless followeds.any?
     
         followeds.count
+      end
+    
+      def num_followers
+        return 0 unless followers.any?
+    
+        followers.count
       end
     
       def num_opinions
