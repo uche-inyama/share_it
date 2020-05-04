@@ -1,6 +1,6 @@
 class OpinionsController < ApplicationController
   def index
-    @opinions = current_user.network_tweets.includes(:author).paginate(page: params[:page])
+    # @opinions = current_user.network_tweets.includes(:author).paginate(page: params[:page])
   end
 
 

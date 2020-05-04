@@ -21,11 +21,26 @@ class UsersController < ApplicationController
     @opinions = current_user.network_tweets.includes(:author).paginate(page: params[:page])
   end
 
+ # def follow 
+  #   current_user.followeds.create({followed_id: params[:id]})
+  #   flash[:sucess] = 'Your request was successful.'
+  #   redirect_to user_path
+  # end
 
-  def follow 
-    current_user.followeds.create({followed_id: params[:id]})
-    flash[:sucess] = 'Your request was successful.'
+  def following
+    @title = "Following"
+    @user = User.find(params[:id])
+    @users = @user.followed_users.paginate(page: params[:page])
     redirect_to user_path
+    # render 'show_follow'
+  end
+
+  def followers
+    @title = "Followers"
+    @user = User.find(params[:id])
+    @users = @user.followers.paginate(page: params[:page])
+    redirect_to user_path
+    # render 'show_follow'
   end
 
   private

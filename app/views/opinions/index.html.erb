@@ -5,10 +5,7 @@
 </div>
 <div class="main_body">
     <div class= "left">
-        <div class="following_stats">
-            <div>following</div>
-            <div>followers</div>
-        </div>
+        <%= render 'shared/stats'%>
         <div class="menu">
             <%= link_to 'Home', opinions_path, class: "home" %>
             <%= link_to 'Profile', user_path(current_user), class: "profile" %>
@@ -22,16 +19,16 @@
         </ul>
         <%= render './shared/new_opinion' %>
         <div class="opinions">
-            <% @opinions.each do |opinion|%>
-                <section> 
-                    <%= opinion.text %>
-                </section>
-            <% end %>
+            <%# <% @opinions.each do |opinion|%>
+                <%# <section>  %>
+                    <%# <%= opinion.text %>
+                <%# </section> %>
+            <%# <% end %>
         </div>
     </div>
     <div class="right">
         <%= render './layouts/who_to_follow'%>
     </div>
 <div>
-<%=  will_paginate  %> 
+<%# <%=  will_paginate  %> 
 

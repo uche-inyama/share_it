@@ -5,10 +5,7 @@
 </div>
 <div class="main_body">
     <div class= "left">
-        <div class="following_stats">
-            <div>following</div>
-            <div>followers</div>
-        </div>
+       <%= render 'shared/stats' %>
         <div class="menu">
             <%= link_to 'Home', opinions_path, class: "home" %>
             <%= link_to 'Profile', user_path(current_user), class: "profile" %>
@@ -33,7 +30,7 @@
         </div>
     </div>
     <div class="right">
-        <a href = "/follow/<%=@user.id%>">follow</a>
+        <%= render 'follow_form' %>
         <div class = "profile_image">
             <div class="profile-info-text">
                 <span class='profile-name'><%= @user.fullname %></span>
