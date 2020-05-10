@@ -2,6 +2,7 @@
 require 'spec_helper'
 require 'database_cleaner'
 require 'capybara/rspec'
+require 'rspec/its'
 # require 'support/factory_bot'
 ENV['RAILS_ENV'] ||= 'test'
 

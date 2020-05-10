@@ -1,19 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe "Users", type: :request do
+RSpec.feature "Users", type: :feature do
+  subject { page }
 
-  describe "GET /new" do
-    it "returns http success" do
-      get "/users/new"
-      expect(response).to have_http_status(:success)
-    end
+  describe 'signup page' do
+    before { visit new_user_path }   
+    it { should have_content('Sign in') }
   end
-
-  describe "GET /show" do
-    it "returns http success" do
-      get "/users/show"
-      expect(response).to have_http_status(:success)
-    end
-  end
-
 end

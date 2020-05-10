@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :user_opinions,  only:  %i[show following followers]
+
  def index 
  end
 
@@ -17,35 +19,29 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-    @opinions = current_user.network_tweets.includes(:author).paginate(page: params[:page])
+    @view_type = 'opinions'
   end
 
- # def follow 
-  #   current_user.followeds.create({followed_id: params[:id]})
-  #   flash[:sucess] = 'Your request was successful.'
-  #   redirect_to user_path
-  # end
-
   def following
-    @title = "Following"
-    @user = User.find(params[:id])
-    @users = @user.followed_users.paginate(page: params[:page])
-    redirect_to user_path
-    # render 'show_follow'
+    @users = @user.followed_user.paginate(page: params[:page])
+    @view_type = 'following'
+    render  :show
   end
 
   def followers
-    @title = "Followers"
-    @user = User.find(params[:id])
     @users = @user.followers.paginate(page: params[:page])
-    redirect_to user_path
-    # render 'show_follow'
+    @view_type = 'followers'
+    render :show
   end
-
+  
   private
 
     def user_params
       params.require(:user).permit(:username, :fullname, :photo, :coverimage)
+    end
+
+    def user_opinions
+      @user = User.find(params[:id])
+      @opinions = current_user.network_tweets.includes(:author).paginate(page: params[:page])
     end
 end

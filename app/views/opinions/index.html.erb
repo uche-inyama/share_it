@@ -19,11 +19,11 @@
         </ul>
         <%= render './shared/new_opinion' %>
         <div class="opinions">
-            <%# <% @opinions.each do |opinion|%>
-                <%# <section>  %>
-                    <%# <%= opinion.text %>
-                <%# </section> %>
-            <%# <% end %>
+            <% @opinions.each do |opinion|%>
+                <section> 
+                    <%= opinion.text %>
+                </section>
+            <% end %>
         </div>
     </div>
     <div class="right">

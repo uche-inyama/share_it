@@ -13,25 +13,38 @@
     </div>
     <div class="center">
         <div class="display_image">
-            image
+            Display Image
+            <%# <%=  image_tag(@user.coverimage) if (@user.coverimage).attached?  %>
         </div>
         <ul class="center_image">
             <li><%= link_to 'tweets', '#', class: "tweets" %></li>
             <li><%= link_to 'photos', '#', class: "photos" %></li>
             <li><%= link_to 'videos',  '#', class: "videos" %></li>
         </ul>
-        <%= render './shared/new_opinion' %>
-        <div class="opinions">
-            <% @opinions.each do |opinion|%>
-                <section> 
-                    <%= opinion.text %>
-                </section>
-            <% end %>
-        </div>
+        <% if @view_type == 'following' %>
+            <div>
+                <%= render @users %>
+            </div>
+        <% elsif @view_type == 'followers'%>
+            <div>
+                <%= render @users %>
+            </div>
+        <% else %>
+            <%= render './shared/new_opinion' %>
+            <div class="opinions">
+                <% @opinions.each do |opinion|%>
+                    <section> 
+                        <%= opinion.text %>
+                    </section>
+                <% end %>
+            </div>
+        <% end %>
+
+        <%# following & followers  %>
     </div>
     <div class="right">
-        <%= render 'follow_form' %>
         <div class = "profile_image">
+            <%= render 'follow_form' %>
             <div class="profile-info-text">
                 <span class='profile-name'><%= @user.fullname %></span>
             </div>
@@ -50,8 +63,8 @@
                 </div>
             </div>
         </div>
-        <%= render './layouts/who_to_follow'%>
+        <%= render './layouts/who_to_follow' %>
     </div>
 <div>
-<%# <%=  will_paginate  %> 
+ <%# <%= will_paginate %>
 

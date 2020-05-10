@@ -1,6 +1,7 @@
 class OpinionsController < ApplicationController
   def index
-    # @opinions = current_user.network_tweets.includes(:author).paginate(page: params[:page])
+    @user = User.find(current_user.id)
+    @opinions = current_user.network_tweets.includes(:author).paginate(page: params[:page])
   end
 
 
@@ -16,7 +17,6 @@ class OpinionsController < ApplicationController
 
 
   private
-
     def opinion_params
       params.require(:opinion).permit(:text)
     end

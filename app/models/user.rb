@@ -1,11 +1,10 @@
 class User < ApplicationRecord
     self.per_page = 10
     has_one_attached :photo
-    validates :username, presence: true
+    has_one_attached :coverimage
+    
+    validates :username, presence: true, length: { maximum: 50 }
     validates :fullname, presence: true
-
-    # has_many :followers, foreign_key: 'followed_id', class_name: 'Following'
-    # has_many :followeds, foreign_key: 'follower_id', class_name: 'Following'
 
     has_many :followings, foreign_key: "follower_id", dependent: :destroy
     has_many :followed_user, through: :followings, source: :followed
@@ -27,12 +26,6 @@ class User < ApplicationRecord
       id_array = followings.map(&:followed_id) << id
       User.where.not(id: id_array).includes([:followed_user]).sample(3)
     end
-
-    # def num_followers
-    #     return 0 unless followeds.any?
-
-    #     followeds.count
-    # end
 
     def num_following
         return 0 unless followed_user.any?

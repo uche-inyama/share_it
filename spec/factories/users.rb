@@ -1,6 +1,12 @@
 FactoryBot.define do
   factory :user do
-    username { "MyString" }
-    fullname { "MyString" }
+    sequence(:username) {|n| "Person #{n}"}
+    sequence(:fullname) {|n| "Person #{n}"}
+
   end
+
+  # factory :opinion do
+  #   text  { "Lorem ipsum" }
+  #   user
+  # end
 end
