@@ -1,7 +1,12 @@
-<%= form_for(:session, url: login_path) do |f|%>
-    <%= f.label :username %>
-    <%= f.text_field :username %>
-
-    <%= f.submit 'Log in' %>
-<% end %>
-<div><%= link_to 'Sign up', new_user_path %></div>
+<div class='sign-in-form form-group row mb-0 sign_in_form'>
+    <%= form_for(:session, url: login_path) do |f|%>
+        <div class='sign-in-field'>
+            <%= f.text_field :username, placeholder: 'username' %>
+        </div>
+        
+        <div class="sign-in-btns">
+            <%= f.submit 'Log in' %>
+            <%= link_to 'Sign up', new_user_path %>
+        </div>
+    <% end %>
+</div>

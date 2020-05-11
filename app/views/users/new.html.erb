@@ -1,18 +1,45 @@
-<%= form_for @user do |f|%>
-    <%= render 'shared/error_messages'%>
-    <%= f.label :username %>
-    <%= f.text_field :username %>
+<div class = 'sign_up_form'>
+     <%= form_for @user do |f|%>
+        <%= render 'shared/error_messages'%>
 
-    <%= f.label :fullname %>
-    <%= f.text_field :fullname %>
 
-    <%= f.label :photo, 'Profile picture'%>
-    <%= f.file_field :photo, class: 'form-control', placeholder: 'Photo URL(optional)'%>
+        <div class='photo_input form-group row mb-0'>
+            <%= f.label :username, class: "col-sm-2 col-form-label p-0" %>
+            <div class="col-sm-10">
+                <%= f.text_field :username, class: 'form-control' %> <br/>
+            </div>
+        </div>  
 
-    <%= f.label :coverimage, 'Cover image'%>
-    <%= f.file_field :coverimage, class: 'form-control', placeholder: "Cover URL (optional)"%>
+        <div class='photo_input form-group row mb-0'>
+            <%= f.label :fullname, class: "col-sm-2 col-form-label p-0" %>
+            <div class='col-sm-10'>
+                <%= f.text_field :fullname, class: 'form-control' %> <br/>
+            </div>
+        </div>        
 
-    <%= f.submit 'Sign Up'%>
-<% end %>
-<div><%= link_to 'Sign in', login_path %></div>
+        <div class='photo_input form-group row mb-0'>
+            <%= f.label :photo, 'Profile picture', class: "col-sm-2 col-form-label p-0"%>
+            <div class='col-sm-10'>
+                <%= f.file_field :photo, class: 'form-control', placeholder: 'Photo URL(optional)'%> <br />
+            </div>
+        </div>
+
+        <div class='photo_input form-group row mb-0'>
+            <%= f.label :coverimage, 'Cover image', class: "col-sm-2 col-form-label p-0"%>
+            <div class="col-sm-10">
+                <%= f.file_field :coverimage, class: 'form-control', placeholder: "Cover URL (optional)"%> <br />
+            </div>
+        </div>
+
+        <div class = 'sign-up-sign-in'>
+            <%= f.submit 'Sign Up', class: 'photo_input form-group row mb-0'%> 
+            <%= link_to 'Sign in', login_path, class: 'sign-in' %>
+        </div>
+    <% end %>
+    <div></div>
+</div>
+
+
+
+
 
