@@ -1,9 +1,8 @@
 class OpinionsController < ApplicationController
   def index
     @user = User.find(current_user.id)
-    @opinions = current_user.network_tweets.includes(:author).paginate(page: params[:page])
+    @opinions = current_user.network_opinions.includes(:author).paginate(page: params[:page])
   end
-
 
   def foreign
     @opinion = current_user.opinions.build(opinion_params)
@@ -14,7 +13,6 @@ class OpinionsController < ApplicationController
     end
     redirect_back fallback_location: '/'
   end
-
 
   private
     def opinion_params

@@ -16,7 +16,7 @@
             <%= image_tag(@user.coverimage, class: 'image-display img-fluid')%> 
         </div>
         <ul class="center_image">
-            <li><%= link_to 'tweets', '#', class: "tweets" %></li>
+            <li><%= link_to 'opinions', '#', class: "tweets" %></li>
             <li><%= link_to 'photos', '#', class: "photos" %></li>
             <li><%= link_to 'videos',  '#', class: "videos" %></li>
         </ul>
@@ -31,7 +31,7 @@
         <% else %>
             <%= render './shared/new_opinion' %>
             <div class="opinions">
-                <% @opinions.each do |opinion|%>
+                <% @user.opinions.each do |opinion|%>
                     <section> 
                         <%= opinion.text %>
                     </section>
@@ -39,7 +39,6 @@
             </div>
         <% end %>
 
-        <%# following & followers  %>
     </div>
     <div class="right">
         <div class = "profile_image">
@@ -65,5 +64,4 @@
         <%= render './layouts/who_to_follow' %>
     </div>
 <div>
- <%# <%= will_paginate %>
 

@@ -17,7 +17,7 @@ class User < ApplicationRecord
 
     has_many :opinions, foreign_key: 'author_id', class_name: 'Opinion'
 
-    def network_tweets
+    def network_opinions
         id_array = followings.map(&:followed_id) << id
         Opinion.where(author_id: id_array)
     end

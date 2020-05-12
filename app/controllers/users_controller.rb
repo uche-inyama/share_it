@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
   before_action :user_opinions,  only:  %i[show following followers]
 
- def index 
- end
+  def index 
+  end
 
   def new
     @user = User.new
@@ -42,6 +42,6 @@ class UsersController < ApplicationController
 
     def user_opinions
       @user = User.find(params[:id])
-      @opinions = current_user.network_tweets.includes(:author).paginate(page: params[:page])
+      @opinions = current_user.network_opinions.includes(:author).paginate(page: params[:page])
     end
 end
