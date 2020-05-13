@@ -60,8 +60,8 @@ li:last-child {
 .following_stats {
   display: flex;
   justify-content: space-around;
-  height: 10%;
-  padding: 20px 0;
+  // height: 10%;
+  padding: 30px 0;
   border: 1px solid black;
   align-items: center;
 }
@@ -81,6 +81,7 @@ li:last-child {
 .center_image {
   height: 10%;
   border: 1px solid black;
+  padding: 30px 0;
 }
 
 ul.center_image {
@@ -92,12 +93,15 @@ ul.center_image {
   margin-left: 10px;
 }
 .right .who_to_follow {
-  height: 10%;
   border: 1px solid black;
 }
 
 .logo {
   padding: 17px 0 0 20px;
+}
+
+.users-wtf ul {
+  padding-left: 20px;
 }
 
 /** Home page **/
@@ -147,10 +151,9 @@ ul.center_image {
   flex-direction: column;
 }
 .wtf-and-button {
-  height: 100%;
   display: flex;
   align-items: center;
-  padding-left: 20px;
+  padding: 30px;
 }
 .opinion {
   margin: 20px 20px;
@@ -233,7 +236,8 @@ form {
   display: flex;
   flex-direction: column;
 }
-.opinions section {
+.opinions section,
+.opinion-user-text {
   margin-bottom: 20px;
   padding: 10px 10px;
 }
@@ -241,12 +245,14 @@ form {
   margin-bottom: 5px;
 }
 
-.opinions-text-image {
+.opinions-text-image,
+.user_opinions {
   display: flex;
   margin: 20px 0;
 }
 
-.author_image {
+.author_image,
+.user_image {
   width: 100px;
   height: 70px;
 }

@@ -13,7 +13,7 @@
     </div>
     <div class="center">
         <div class="display_image">
-            <%= image_tag(@user.coverimage, class: 'image-display img-fluid')%> 
+            <%= image_tag(@user.coverimage, class: 'image-display img-fluid') if @user.coverimage.attached?%> 
         </div>
         <ul class="center_image">
             <li><%= link_to 'opinions', '#', class: "tweets" %></li>
@@ -32,8 +32,9 @@
             <%= render './shared/new_opinion' %>
             <div class="opinions">
                 <% @user.opinions.each do |opinion|%>
-                    <section> 
-                        <%= opinion.text %>
+                    <section class="user_opinions"> 
+                        <div><%= image_tag(@user.photo, class: "user_image") if @user.photo.attached?%></div>
+                        <p class="opinion-user-text"><%= opinion.text %></p>
                     </section>
                 <% end %>
             </div>
