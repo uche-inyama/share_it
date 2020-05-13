@@ -42,6 +42,6 @@ class UsersController < ApplicationController
 
     def user_opinions
       @user = User.find(params[:id])
-      @opinions = current_user.network_opinions.includes(:author).paginate(page: params[:page])
+      @opinions = current_user.opinions_list.includes(:author).paginate(page: params[:page])
     end
 end

@@ -5,7 +5,7 @@
 </div>
 <div class="users-wtf">
        <ul>
-            <% current_user.random_wtf.each do |random_user| %>
+            <% current_user.who_to_follow.each do |random_user| %>
                 <li>
                     <div class="text">
                         <%= link_to "#{random_user.fullname}", user_path(random_user)%>

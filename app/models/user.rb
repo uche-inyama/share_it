@@ -17,12 +17,12 @@ class User < ApplicationRecord
 
     has_many :opinions, foreign_key: 'author_id', class_name: 'Opinion'
 
-    def network_opinions
+    def opinions_list
         id_array = followings.map(&:followed_id) << id
         Opinion.where(author_id: id_array)
     end
 
-    def random_wtf
+    def who_to_follow
       id_array = followings.map(&:followed_id) << id
       User.where.not(id: id_array).includes([:followed_user]).sample(3)
     end
@@ -35,13 +35,11 @@ class User < ApplicationRecord
     
       def num_followers
         return 0 unless followers.any?
-    
         followers.count
       end
     
       def num_opinions
         return 0 unless opinions.any?
-    
         opinions.count
       end
 
