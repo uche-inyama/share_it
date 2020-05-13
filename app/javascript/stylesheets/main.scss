@@ -54,7 +54,7 @@ li:last-child {
 .main_body {
   display: grid;
   grid-template-columns: 2fr 9fr 3fr;
-  grid-template-rows: 100vh;
+  grid-template-rows: 100%;
 }
 
 .following_stats {
@@ -232,4 +232,21 @@ form {
 .homepage_image {
   display: flex;
   flex-direction: column;
+}
+.opinions section {
+  margin-bottom: 20px;
+  padding: 10px 10px;
+}
+.opinion_name {
+  margin-bottom: 5px;
+}
+
+.opinions-text-image {
+  display: flex;
+  margin: 20px 0;
+}
+
+.author_image {
+  width: 100px;
+  height: 70px;
 }

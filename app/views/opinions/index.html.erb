@@ -20,9 +20,15 @@
         <%= render './shared/new_opinion' %>
         <div class="opinions">
             <% @opinions.each do |opinion|%>
-                <section> 
-                    <%= opinion.text %>
-                </section>
+                <div class = "opinions-text-image">
+                    <div class="author_image_container">
+                        <%= image_tag(opinion.author.photo, class: "author_image")%>
+                    </div>
+                    <section> 
+                        <p class="opinion_name"><%= opinion.author.fullname %></p>
+                        <p class="opinion_text"><%= opinion.text %></p>
+                    </section>
+                </div>
             <% end %>
         </div>
     </div>

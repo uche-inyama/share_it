@@ -1,7 +1,7 @@
 class OpinionsController < ApplicationController
   def index
     @user = User.find(current_user.id)
-    @opinions = current_user.network_opinions.includes(:author).paginate(page: params[:page])
+    @opinions = current_user.network_opinions
   end
 
   def foreign
