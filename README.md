@@ -1,6 +1,8 @@
 # Project Name
 
-> One paragraph statement about the project.
+> This project is a re-implementation of some of the features of twitter application.
+> A user can sign up with their photo, a signed in user create posts, follow and unfollow another user.
+> This project has the basic features of a twitter application.
 
 ![Screenshot](https://user-images.githubusercontent.com/46329537/81774954-b1d16a80-94e3-11ea-94e2-99a5e5d70568.png)
 
@@ -15,7 +17,7 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[Live Demo Link](https://whispering-reef-47073.herokuapp.com/)
+[Live Demo Link](https://obscure-ravine-04447.herokuapp.com/)
 
 ## Getting Started
 
@@ -47,7 +49,7 @@ Open http://localhost:3000/ in your browser
 
 ### Deployment:
 
-https://whispering-reef-47073.herokuapp.com/
+https://obscure-ravine-04447.herokuapp.com/
 
 ## Author
 
