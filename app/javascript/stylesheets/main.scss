@@ -79,7 +79,6 @@ li:last-child {
   text-align: center;
 }
 .center_image {
-  height: 10%;
   border: 1px solid black;
   padding: 30px 0;
 }
@@ -255,4 +254,11 @@ form {
 .user_image {
   width: 100px;
   height: 70px;
+}
+.following-follower {
+  display: flex;
+  justify-content: start;
+}
+.following-follower section {
+  margin: 10px 0 10px 5px;
 }
