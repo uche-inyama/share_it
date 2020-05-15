@@ -1,8 +1,7 @@
 # Project Name
 
 > This project is a re-implementation of some of the features of twitter application.
-> A user can sign up with their photo, a signed in user create posts, follow and unfollow another user.
-> This project has the basic features of a twitter application.
+> A user can sign up with their photo, a signed in user can create posts, follow and unfollow another user.
 
 ![Screenshot](https://user-images.githubusercontent.com/46329537/81774954-b1d16a80-94e3-11ea-94e2-99a5e5d70568.png)
 
