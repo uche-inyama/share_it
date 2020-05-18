@@ -31,8 +31,8 @@ RSpec.describe User, type: :model do
   it { should respond_to(:num_following)}
   it { should respond_to(:num_followers)}
   it { should respond_to(:num_opinions)}
-  it { should respond_to(:random_wtf)}
-  it { should respond_to(:network_tweets)}
+  it { should respond_to(:who_to_follow)}
+  it { should respond_to(:opinions_list)}
 
   describe "following" do
     let(:other_user){FactoryBot.create(:user)}
@@ -52,19 +52,6 @@ RSpec.describe User, type: :model do
       before { @user.unfollow!(other_user) }
       it {should_not be_following(other_user) }
       its(:followed_user){ should_not include(other_user) }
-    end
-  end
-
-  describe "opinion associations" do
-    before { @user.save }
-    let!(:older_opinion) do
-      FactoryBot.create(:opinion, user: @user, created_at: 1.day.ago)
-    end
-    let!(:newer_opinion) do
-      FactoryBot.create(:opinion, user: @user, created_at: 1.hour.ago)
-    end
-    it "should have the right opinions in the right order" do
-      expect(@user.opinions.to_a).to eq [newer_opinion, older_opinion]
     end
   end
 end
