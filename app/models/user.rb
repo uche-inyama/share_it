@@ -3,8 +3,8 @@ class User < ApplicationRecord
     has_one_attached :photo
     has_one_attached :coverimage
     
-    validates :username, presence: true, length: { maximum: 50 }
-    validates :fullname, presence: true
+    validates :username, presence: true, length: { maximum: 50 }, uniqueness: true
+    validates :fullname, presence: true, uniqueness: true
 
     has_many :followings, foreign_key: "follower_id", dependent: :destroy
     has_many :followed_user, through: :followings, source: :followed
