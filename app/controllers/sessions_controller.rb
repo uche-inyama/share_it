@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       log_in user
       redirect_to opinions_path
     else
-      flash[:danger] = 'Invalid email'
+      flash.now[:danger] = 'Invalid email'
       render 'new'
     end
   end

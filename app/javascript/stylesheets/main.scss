@@ -54,13 +54,12 @@ li:last-child {
 .main_body {
   display: grid;
   grid-template-columns: 2fr 9fr 3fr;
-  grid-template-rows: 100%;
+  grid-template-rows: minmax(100vh, auto);
 }
 
 .following_stats {
   display: flex;
   justify-content: space-around;
-  // height: 10%;
   padding: 30px 0;
   border: 1px solid black;
   align-items: center;
@@ -261,4 +260,50 @@ form {
 }
 .following-follower section {
   margin: 10px 0 10px 5px;
+}
+.alert-success {
+  background-color: green;
+  color: white;
+  position: absolute;
+  width: 50%;
+  left: 200px;
+}
+.alert-sucess {
+  color: white;
+  position: absolute;
+  width: 50%;
+  left: 200px;
+}
+
+.alert-error {
+  background-color: red;
+  color: white;
+  position: absolute;
+  width: 100%;
+  left: 400px;
+}
+.alert-danger {
+  position: absolute;
+  width: 50%;
+  left: 200px;
+}
+.form-group {
+  display: flex;
+}
+.form-control {
+  width: 100%;
+}
+.photo {
+  width: 75%;
+}
+.label,
+.photo_label {
+  width: 120px;
+}
+#error_explanation {
+  margin-bottom: 20px;
+  color: red;
+}
+.error_explanation li {
+  margin-bottom: 5px;
 }

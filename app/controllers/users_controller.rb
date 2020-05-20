@@ -1,7 +1,12 @@
 class UsersController < ApplicationController
   before_action :user_opinions,  only:  %i[show following followers]
 
-  def index 
+  def index
+    if current_user.nil?
+      redirect_to login_path
+    else
+      redirect_to login_path
+    end
   end
 
   def new
