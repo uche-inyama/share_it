@@ -16,7 +16,7 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[Live Demo Link](https://obscure-ravine-04447.herokuapp.com/)
+[Live Demo Link](https://aqueous-harbor-16310.herokuapp.com/)
 
 ## Getting Started
 
@@ -48,7 +48,7 @@ Open http://localhost:3000/ in your browser
 
 ### Deployment:
 
-https://obscure-ravine-04447.herokuapp.com/
+https://aqueous-harbor-16310.herokuapp.com/
 
 ## Author
 
