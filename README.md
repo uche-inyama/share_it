@@ -16,7 +16,7 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[Live Demo Link](https://aqueous-harbor-16310.herokuapp.com/)
+[Live Demo Link](https://sleepy-fjord-84167.herokuapp.com/)
 
 ## Getting Started
 
@@ -48,7 +48,7 @@ Open http://localhost:3000/ in your browser
 
 ### Deployment:
 
-https://aqueous-harbor-16310.herokuapp.com/
+https://sleepy-fjord-84167.herokuapp.com/
 
 ## Author
 
