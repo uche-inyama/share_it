@@ -14,6 +14,20 @@ Additional description about the project and its features.
 - CSS,
 - Bootstrap
 
+## Features
+
+- Sign up
+- Login
+- create a post
+- Follow & unfollow a user
+- Ability to see number of followers and followings
+
+## Potential Features
+- Ability to add an image in a post
+- Ability to add a video in a post.
+- Ability to comment on a post
+- Ability to search for users in the application.
+
 ## Live Demo
 
 [Live Demo Link](https://sleepy-fjord-84167.herokuapp.com/)
