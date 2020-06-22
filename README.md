@@ -18,7 +18,7 @@ Additional description about the project and its features.
 
 - Sign up
 - Login
-- create a post
+- Create a post
 - Follow & unfollow a user
 - Ability to see number of followers and followings
 
