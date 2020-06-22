@@ -22,7 +22,7 @@ Additional description about the project and its features.
 - Follow & unfollow a user
 - Ability to see number of followers and followings
 
-## Potential Features
+## Future Features
 - Ability to add an image in a post
 - Ability to add a video in a post.
 - Ability to comment on a post
