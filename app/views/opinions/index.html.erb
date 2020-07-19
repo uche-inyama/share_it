@@ -5,36 +5,35 @@
 </div>
 <div class="main_body">
     <div class= "left">
-        <%= render 'shared/stats'%>
-        <div class="menu">
-            <span><i class="fa fa-home" aria-hidden="true"></i><%= link_to 'Home', opinions_path, class: "home" %></span>
-            <span><i class="fa fa-user" aria-hidden="true"></i><%= link_to 'Profile', user_path(current_user), class: "profile" %></span>
-        </div>
+      <%= render 'shared/stats'%>
+      <div class="menu">
+        <span><i class="fa fa-home" aria-hidden="true"></i><%= link_to 'Home', opinions_path, class: "home" %></span>
+        <span><i class="fa fa-user" aria-hidden="true"></i><%= link_to 'Profile', user_path(current_user), class: "profile" %></span>
+      </div>
     </div>
     <div class="center">
-        <ul class="center_image">
-            <li><%= link_to 'opinions', '#', class: "tweets" %></li>
-            <li><%= link_to 'photos', '#', class: "photos" %></li>
-            <li><%= link_to 'videos',  '#', class: "videos" %></li>
-        </ul>
-        <%= render './shared/new_opinion' %>
-        <div class="opinions">
-            <% @opinions.each do |opinion|%>
-                <div class = "opinions-text-image">
-                    <div class="author_image_container">
-                        <%= image_tag(opinion.author.photo, class: "author_image")%>
-                    </div>
-                    <section> 
-                        <p class="opinion_name"><%= opinion.author.fullname %></p>
-                        <p class="opinion_text"><%= opinion.text %></p>
-                    </section>
-                </div>
-            <% end %>
-        </div>
+      <ul class="center_image">
+        <li><%= link_to 'opinions', '#', class: "tweets" %></li>
+        <li><%= link_to 'photos', '#', class: "photos" %></li>
+        <li><%= link_to 'videos',  '#', class: "videos" %></li>
+      </ul>
+      <%= render './shared/new_opinion' %>
+      <div class="opinions">
+          <% @opinions.each do |opinion|%>
+            <div class = "opinions-text-image">
+              <div class="author_image_container">
+                <%= image_tag(opinion.author.photo, class: "author_image")%>
+              </div>
+              <section> 
+                <p class="opinion_name"><%= opinion.author.fullname %></p>
+                <p class="opinion_text"><%= opinion.text %></p>
+              </section>
+            </div>
+          <% end %>
+      </div>
     </div>
     <div class="right">
-        <%= render './layouts/who_to_follow'%>
+      <%= render './layouts/who_to_follow'%>
     </div>
 <div>
-<%# <%=  will_paginate  %> 
 

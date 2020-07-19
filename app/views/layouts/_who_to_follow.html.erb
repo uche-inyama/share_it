@@ -4,14 +4,16 @@
     </div>
 </div>
 <div class="users-wtf">
-       <ul>
-            <% current_user.who_to_follow.each do |random_user| %>
-                <li>
-                    <div class="text">
-                        <%= link_to "#{random_user.fullname}", user_path(random_user)%>
-                    </div>
-                </li>
-            <% end %>
-       </ul>
+  <ul>
+    <% current_user.who_to_follow.each do |random_user| %>
+      <li>
+        <div class="who-to-follow">
+          <div class="author_image_container">
+            <%= image_tag(random_user.photo, class: "author_image")%>
+          </div>
+          <%= link_to "#{random_user.fullname}", user_path(random_user)%>
+        </div>
+      </li>
+    <% end %>
+  </ul>
 </div>
-
