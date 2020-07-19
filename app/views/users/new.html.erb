@@ -1,44 +1,46 @@
-<div class = 'sign_up_form'>
-     <%= form_for @user do |f|%>
-        <%= render 'shared/error_messages'%>
+<div class="signup-page">
+  <%= render './layouts/nav_signup' %>
 
+  <div class = 'sign_up_form'>
+    <%= image_tag("cloud-sharing.png") %>
+    <%= form_for @user do |f|%>
+    <h1 class="create_new_user">create new user</h2>
+      <%= render 'shared/error_messages'%>
         <div class='photo_input form-group'>
-            <%= f.label :username, class: " label" %>
-            <div class="">
-                <%= f.text_field :username, class: 'form-control' %> <br/>
+            <div class="text-field">
+              <%= f.text_field :username, class: 'form-control', placeholder: 'Username'%> <br/>
             </div>
-        </div>  
-
+          </div>  
         <div class='photo_input form-group'>
-            <%= f.label :fullname, class: " label" %>
-            <div class=''>
-                <%= f.text_field :fullname, class: 'form-control' %> <br/>
-            </div>
+          <div class='text-field'>
+            <%= f.text_field :fullname, class: 'form-control', placeholder: 'Fullname' %> <br/>
+          </div>
         </div>        
 
         <div class='photo_input form-group '>
-            <%= f.label :photo, 'Profile picture', class: "photo_label"%>
-            <div class=''>
-                <%= f.file_field :photo, class: 'form-control photo', placeholder: 'Photo URL(optional)'%> <br />
-            </div>
+          <%= f.label :photo, 'Profile picture', class: "photo_label"%>
+          <div class='text-field'>
+            <%= f.file_field :photo, class: 'form-control photo', placeholder: 'Photo URL(optional)'%> <br />
+          </div>
         </div>
 
         <div class='photo_input form-group'>
-            <%= f.label :coverimage, 'Cover image', class: "photo_label"%>
-            <div class="">
-                <%= f.file_field :coverimage, class: 'form-control photo', placeholder: "Cover URL (optional)"%> <br />
-            </div>
+          <%= f.label :coverimage, 'Cover image', class: "photo_label"%>
+          <div class="text-field">
+            <%= f.file_field :coverimage, class: 'form-control photo', placeholder: "Cover URL (optional)"%> <br />
+          </div>
         </div>
 
-        <div class = 'sign-up-sign-in'>
-            <%= f.submit 'Sign Up', class: 'photo_input form-group'%> 
-            <%= link_to 'Sign in', login_path, class: 'sign-in' %>
+        <div class = 'sign-up'>
+          <%= f.submit 'Sign Up', class: 'submit form-group'%> 
+            <%# <%= link_to 'Sign in', login_path, class: 'sign-in' %>
         </div>
     <% end %>
-    <div></div>
 </div>
 
 
 
 
 
+
+</div>

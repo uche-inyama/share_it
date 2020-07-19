@@ -57,3 +57,6 @@ class User < ApplicationRecord
         followings.find_by(followed_id: other_user.id).destroy
       end
 end
+
+
+

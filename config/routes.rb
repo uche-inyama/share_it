@@ -6,11 +6,11 @@ Rails.application.routes.draw do
   end
   resources :followings, only: %i[create destroy]
   resources :opinions, only: %i[index show]
-  get '/login', to: 'sessions#new'
+  # get '/signup', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   get '/signup', to: 'users#new'
   post '/signup', to: 'users#create'
   delete '/logout', to: 'sessions#destroy'
   post '/opinion/foreign', to: 'opinions#foreign'
-  root 'sessions#new'
+  root 'users#new'
 end

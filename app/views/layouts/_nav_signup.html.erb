@@ -1,0 +1,15 @@
+<div class="nav-signup-signin">
+  <div class = "logo-signup-signin"> share_it</div>
+  <div class='sign-in-form form-group mb-0 '>
+    <%= form_for(:session, url: login_path) do |f|%>
+        <div class='sign-in-field'>
+            <%= f.text_field :username, placeholder: 'Username' %>
+        </div>
+        
+        <div class="sign-in-btns">
+            <%= f.submit 'Log in' %>
+            <%# <%= link_to 'Sign up', new_user_path %>
+        </div>
+    <% end %>
+  </div>
+</div>

@@ -14,11 +14,35 @@ body {
 .left {
   background-color: #7285a5;
 }
-
+.signup-page {
+  display: grid;
+  grid-template-columns: 1 fr;
+  grid-template-rows: repeat(2 1fr);
+}
 nav {
   display: flex;
   padding-top: 10px;
   height: 50px;
+}
+.nav-signup-signin {
+  background-color: #008ecc;
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+  height: 50px;
+  align-items: center;
+}
+
+.sign-in-field input {
+  height: 30px;
+  width: 230px;
+  border: 1px solid gainsboro;
+  border-radius: 2px;
+}
+.sign-in-btns input {
+  height: 30px;
+  width: 100px;
+  border: 1px solid gainsboro;
+  border-radius: 2px;
 }
 .nav-bar {
   position: relative;
@@ -95,11 +119,10 @@ ul.center_image {
   border: 1px solid black;
 }
 
-.logo {
-  padding: 17px 0 0 20px;
+.logo-signup-signin {
+  padding-left: 50px;
 }
-
-.users-wtf ul {
+.logo .users-wtf ul {
   padding-left: 20px;
 }
 
@@ -187,18 +210,53 @@ form {
 #follow_form {
   margin: 10px auto;
 }
+.sign_up_form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 600px;
+  form {
+    align-self: center;
+    justify-self: center;
+    h1 {
+      text-transform: capitalize;
+      margin-bottom: 20px;
+      font-size: 2em;
+      font-weight: 700;
+    }
+  }
+  img {
+    width: 500px;
+    height: 500px;
+    justify-self: end;
+  }
+}
+@media (max-width: 1200px) {
+  .sign_up_form img {
+    width: 450px;
+    height: 450px;
+  }
+}
+@media (max-width: 992px) {
+  .sign_up_form img {
+    width: 400px;
+    height: 400px;
+  }
+}
 
-.sign_up_form,
-.sign_in_form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 50px;
+.text-field .form-control {
+  width: 350px;
+  height: 50px;
 }
-.new_user {
-  width: 50%;
+.submit {
+  width: 200px;
+  height: 50px;
+  padding-left: 10px;
+  font-size: 1.5em;
+  font-weight: 600;
+  border: 0.8px solid #000;
+  border-radius: 1px;
 }
+
 .form-control {
   width: 50%;
 }
@@ -212,24 +270,22 @@ form {
   height: 200px;
 }
 
-.photo_input {
-  margin-right: 20px;
-}
-
 .sign-up-sign-in {
   display: flex;
 }
 .sign-in-field {
-  width: 100%;
+  margin-right: 10px;
 }
-.sign-in-btns {
-  margin-top: 20px;
+
+.logo-signup-signin {
+  color: white;
+  font-size: 1.5em;
+  font-weight: 700;
 }
 .sign-in-form form {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  justify-content: flex-end;
+  padding-right: 100px;
 }
 .homepage_image {
   display: flex;
@@ -288,18 +344,18 @@ form {
   width: 50%;
   left: 200px;
 }
-.form-group {
-  display: flex;
-}
+
 .form-control {
   width: 100%;
 }
 .photo {
   width: 75%;
 }
-.label,
+
 .photo_label {
   width: 120px;
+  font-size: 1em;
+  font-weight: 600;
 }
 #error_explanation {
   margin-bottom: 20px;
