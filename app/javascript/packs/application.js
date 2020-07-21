@@ -19,3 +19,12 @@ import "@fortawesome/fontawesome-free/js/all";
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+console.log("Hello from application.js");
+// let someObject;
+// window.addEventListener("DOMContentLoaded", (_event) => {
+//   someObject = document.querySelector(".display_image");
+// });
+// console.log(someObject);
+const signupPage = document.querySelector(".signup-page");
+console.log(signupPage);

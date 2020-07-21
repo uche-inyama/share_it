@@ -1,8 +1,9 @@
 @import "bootstrap/scss/bootstrap";
 @import "@fortawesome/fontawesome-free";
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
 body {
-  background-color: #eeeeee;
+  background-color: #fff;
 }
 
 .static {
@@ -12,7 +13,8 @@ body {
   background-color: #008ecc;
 }
 
-.left {
+.left,
+.right {
   background-color: #7285a5;
 }
 .signup-page {
@@ -56,14 +58,17 @@ body {
   display: flex;
   justify-content: space-around;
   padding: 30px 0;
-  border-bottom: 1px solid black;
-  border-top: 1px solid black;
+  // border-bottom: 1px solid rgb(247, 243, 243);
+  border-bottom: 1px solid rgb(194, 191, 207);
+
+  // border-top: 1px solid black;
   align-items: center;
   a {
     text-decoration: none;
     cursor: pointer;
     font-size: 1em;
     font-weight: 500;
+    font-family: "Nunito", Arial, Helvetica, sans-serif;
     color: #000;
     text-transform: capitalize;
   }
@@ -75,6 +80,9 @@ body {
   align-items: stretch;
   padding-left: 20px;
   margin-top: 20px;
+  font-weight: 400;
+  font-size: 1.1em;
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
   a {
     color: #000;
     cursor: pointer;
@@ -97,9 +105,11 @@ body {
   text-align: center;
 }
 .center_image {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(194, 191, 207);
   padding: 30px 0;
+  font-weight: 400;
+  font-size: 1em;
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
 }
 
 ul.center_image {
@@ -117,7 +127,13 @@ ul.center_image {
   }
 }
 .right .who_to_follow {
-  border: 1px solid black;
+  ul {
+    padding-left: 20px;
+    margin-top: 20px;
+    li {
+      margin-bottom: 15px;
+    }
+  }
 }
 
 .logo-signup-signin {
@@ -133,6 +149,7 @@ ul.center_image {
     color: white;
     font-size: 1.5em;
     font-weight: 700;
+    font-family: "Nunito", Arial, Helvetica, sans-serif;
   }
 }
 
@@ -142,6 +159,12 @@ ul.center_image {
   display: flex;
   align-items: center;
   justify-content: center;
+  .homepage_image {
+    a {
+      font-family: "Nunito", Arial, Helvetica, sans-serif;
+      text-transform: capitalize;
+    }
+  }
 }
 
 .opinion_form {
@@ -149,6 +172,7 @@ ul.center_image {
   border: solid 1px gray;
   border-radius: 5px;
 }
+
 .opinion_input {
   width: 90%;
   height: 40px;
@@ -158,11 +182,15 @@ ul.center_image {
   display: block;
   text-align: left;
   padding: 10px 0 10px 40px;
+  font-size: 1em;
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  padding-left: 35px;
 }
 
 .opinions {
   text-align: left;
-  padding-left: 20px;
+  font-weight: 400;
 }
 
 .right h4 {
@@ -177,6 +205,7 @@ ul.center_image {
 }
 .users-wtf {
   margin-top: 20px;
+  padding-left: 20px;
 }
 .users-wtf ul {
   display: flex;
@@ -185,21 +214,45 @@ ul.center_image {
     margin-bottom: 10px;
   }
   a {
-    text-decoration: none;
     color: #000;
+    font-weight: 700;
+    text-decoration: none;
   }
 }
 .wtf-and-button {
+  border-bottom: 1px solid rgb(194, 191, 207);
   display: flex;
   align-items: center;
-  padding: 30px;
+  font-weight: 400;
+  font-size: 1.2em;
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+  height: 77px;
+
+  h1 {
+    width: 100%;
+    padding-left: 20px;
+  }
+  ul li {
+    padding-left: 20px;
+  }
 }
 .who-to-follow {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-gap: 5px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 90px;
+  grid-gap: 2px;
+  .author_image_container {
+    img {
+      height: 100%;
+    }
+  }
   a {
+    font-weight: 400;
+    font-size: 1em;
+    font-family: "Nunito", Arial, Helvetica, sans-serif;
     align-self: center;
+    text-decoration: none;
+    color: #000;
   }
 }
 .opinion {
@@ -210,21 +263,30 @@ form {
 }
 
 .display_image {
+  width: 800px;
+  height: 300px;
+}
+.image-display {
   width: 100%;
-  height: 200px;
+  height: 100%;
 }
 .profile_image {
-  height: 190px;
+  height: 170px;
   text-align: center;
+  padding-top: 30px;
   padding-left: 10px;
+  font-weight: 500;
+  font-size: 1em;
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+  .profile-user-info {
+    display: flex;
+    justify-content: center;
+  }
+  .profile-info-text {
+    margin: 20px 0;
+  }
 }
-.profile-user-info {
-  display: flex;
-  justify-content: center;
-}
-.profile-info-text {
-  margin: 10px 0;
-}
+
 .user-info {
   margin-right: 10px;
 }
@@ -289,10 +351,7 @@ form {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-}
-.image-display {
-  width: 100%;
-  height: 200px;
+  margin-bottom: 5px;
 }
 
 .sign-up-sign-in {
@@ -317,6 +376,7 @@ form {
   flex-direction: column;
   a {
     text-decoration: none;
+    text-align: center;
     cursor: pointer;
     font-size: 1em;
     font-weight: 500;
@@ -325,11 +385,16 @@ form {
 }
 .opinions section,
 .opinion-user-text {
+  align-self: center;
   margin-bottom: 20px;
-  padding: 10px 10px;
+  padding: 0 10px;
+  font-family: "sans-seri", Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: 500;
 }
 .opinion_name {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .opinions-text-image,
@@ -340,8 +405,9 @@ form {
 
 .author_image,
 .user_image {
-  width: 100px;
-  height: 70px;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
 }
 .following-follower {
   display: flex;

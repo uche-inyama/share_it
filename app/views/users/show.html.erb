@@ -1,15 +1,14 @@
 <div class="static">
     <%= render './layouts/profile_menu' %>
-    <%# <div class = "logo"><i class="fab fa-twitter fa-2x"></i></div> %>
-    <div class = "logo">share_it</div>
+    <div class="logo"><h2>share_it</h2></div>
     <%= render './layouts/nav' %>
 </div>
 <div class="main_body">
     <div class= "left">
       <%= render 'shared/stats' %>
-      <div class="menu">
-        <%= link_to 'Home', opinions_path, class: "home" %>
-        <%= link_to 'Profile', user_path(current_user), class: "profile" %>
+     <div class="menu">
+        <span><i class="fa fa-home" aria-hidden="true"></i><%= link_to 'Home', opinions_path, class: "home" %></span>
+        <span><i class="fa fa-user" aria-hidden="true"></i><%= link_to 'Profile', user_path(current_user), class: "profile" %></span>
       </div>
     </div>
     <div class="center">
@@ -44,24 +43,24 @@
     </div>
     <div class="right">
         <div class = "profile_image">
-            <%= render 'follow_form' %>
-            <div class="profile-info-text">
-                <span class='profile-name'><%= @user.fullname %></span>
+          <%= render 'follow_form' %>
+          <div class="profile-info-text">
+            <span class='profile-name'><%= @user.fullname %></span>
+          </div>
+          <div class="profile-user-info">
+            <div class="user-info-jlts user-info">
+              <h5><%= @user.num_opinions %></h5>
+              <p>Opinions</p>
             </div>
-            <div class="profile-user-info">
-                <div class="user-info-jlts user-info">
-                    <h5><%= @user.num_opinions %></h5>
-                    <p>Opinions</p>
-                </div>
-                <div class="user-info-following user-info">
-                    <h5><%= @user.num_following %></h5>
-                    <p>Following</p>
-                </div>
-                <div class="user-info-followers user-info">
-                    <h5><%= @user.num_followers %></h5>
-                    <p>Followers</p>
-                </div>
+            <div class="user-info-following user-info">
+              <h5><%= @user.num_following %></h5>
+              <p>Following</p>
             </div>
+            <div class="user-info-followers user-info">
+              <h5><%= @user.num_followers %></h5>
+              <p>Followers</p>
+            </div>
+          </div>
         </div>
         <%= render './layouts/who_to_follow' %>
     </div>
