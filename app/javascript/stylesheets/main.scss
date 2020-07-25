@@ -332,9 +332,10 @@ form {
     }
   }
   img {
-    width: 500px;
-    height: 500px;
-    justify-self: end;
+    // width: 400px;
+    // height: 400px;
+    justify-self: center;
+    align-self: center;
   }
 }
 
@@ -489,8 +490,8 @@ form {
     display: block;
   }
   .sign_up_form img {
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
   }
   .center {
     overflow-y: scroll;
@@ -507,8 +508,8 @@ form {
     display: block;
   }
   .sign_up_form img {
-    width: 200px;
-    height: 200px;
+    width: 500px;
+    height: 500px;
   }
   .center {
     overflow-y: scroll;
