@@ -12,35 +12,35 @@
       </div>
     </div>
     <div class="center">
-        <div class="display_image">
-          <%= image_tag(@user.coverimage, class: 'image-display img-fluid') if @user.coverimage.attached?%> 
-        </div>
-        <ul class="center_image">
-          <li><%= link_to 'opinions', '#', class: "tweets" %></li>
-          <li><%= link_to 'photos', '#', class: "photos" %></li>
-          <li><%= link_to 'videos',  '#', class: "videos" %></li>
-        </ul>
-        <% if @view_type == 'following' %>
-            <div>
-              <%= render @users %>
-            </div>
-        <% elsif @view_type == 'followers'%>
+      <div class="display_image">
+        <%= image_tag(@user.coverimage, class: 'image-display img-fluid') if @user.coverimage.attached?%> 
+      </div>
+      <ul class="center_image">
+        <li><%= link_to 'opinions', '#', class: "tweets" %></li>
+        <li><%= link_to 'photos', '#', class: "photos" %></li>
+        <li><%= link_to 'videos',  '#', class: "videos" %></li>
+      </ul>
+      <% if @view_type == 'following' %>
           <div>
             <%= render @users %>
           </div>
-        <% else %>
-          <%= render './shared/new_opinion' %>
-          <div class="opinions">
-            <% @user.opinions.each do |opinion|%>
-              <section class="user_opinions"> 
-                <div><%= image_tag(@user.photo, class: "user_image") if @user.photo.attached?%></div>
-                <p class="opinion-user-text"><%= opinion.text %></p>
-              </section>
-            <% end %>
-          </div>
-        <% end %>
-
+      <% elsif @view_type == 'followers'%>
+        <div>
+          <%= render @users %>
+        </div>
+      <% else %>
+        <%= render './shared/new_opinion' %>
+        <div class="opinions">
+          <% @user.opinions.each do |opinion|%>
+            <section class="user_opinions"> 
+              <div><%= image_tag(@user.photo, class: "user_image") if @user.photo.attached?%></div>
+              <p class="opinion-user-text"><%= opinion.text %></p>
+            </section>
+          <% end %>
+        </div>
+      <% end %>
     </div>
+
     <div class="right">
         <div class = "profile_image">
           <%= render 'follow_form' %>
