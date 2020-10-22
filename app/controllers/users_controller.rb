@@ -44,7 +44,7 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:username, :fullname, :photo, :coverimage)
+      params.require(:user).permit(:username, :fullname, :photo)
     end
 
     def user_opinions

@@ -1,6 +1,6 @@
 <div class="homepage">
     <div class='homepage_image'>
-        <%= image_tag(@user.photo, class: 'user_profile') if @user.photo.attached? %>
+        <%= image_tag(@user.photo.url, class: 'user_profile') if @user.photo? %>
         <%= link_to  "#{current_user.username}" %>
     </div>
 </div>

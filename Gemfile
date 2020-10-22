@@ -59,3 +59,4 @@ gem 'font_awesome5_rails'
 gem 'will_paginate'
 gem "mini_magick"
 gem 'rspec-its'
+gem 'carrierwave'
