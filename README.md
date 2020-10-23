@@ -1,4 +1,4 @@
-# Project Name
+# Twitter Re_design
 
 > This project is a re-implementation of some of the features of twitter application.
 > A user can sign up with their photo, a signed in user can create posts, follow and unfollow another user.
