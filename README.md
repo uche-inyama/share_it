@@ -30,7 +30,7 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[Live Demo Link](https://sleepy-fjord-84167.herokuapp.com/)
+[Live Demo Link](https://aqueous-reef-53418.herokuapp.com/)
 
 ## Getting Started
 
@@ -62,7 +62,7 @@ Open http://localhost:3000/ in your browser
 
 ### Deployment:
 
-https://sleepy-fjord-84167.herokuapp.com/
+https://aqueous-reef-53418.herokuapp.com/
 
 ## Author
 
