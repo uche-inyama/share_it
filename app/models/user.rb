@@ -6,7 +6,6 @@ class User < ApplicationRecord
     validates :fullname, presence: true, uniqueness: true
     validates :photo, presence: true
 
-
     has_many :followings, foreign_key: "follower_id", dependent: :destroy
     has_many :followed_user, through: :followings, source: :followed
 

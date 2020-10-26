@@ -22,7 +22,7 @@
           <% @opinions.each do |opinion|%>
             <div class = "opinions-text-image">
               <div class="author_image_container">
-                <%= image_tag(opinion.author.photo, class: "author_image")%>
+                <%= image_tag(opinion.author.photo.url, class: "author_image") if opinion.author.photo? %>
               </div>
               <section> 
                 <p class="opinion_name"><%= opinion.author.fullname %></p>
