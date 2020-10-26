@@ -13,7 +13,7 @@
     </div>
     <div class="center">
       <div class="display_image">
-        <%# <%= image_tag(@user.coverimage, class: 'image-display img-fluid') if @user.coverimage.attached?%>
+        <%= image_tag(@user.coverimage, class: 'image-display img-fluid') if @user.coverimage? %>
       </div>
       <ul class="center_image">
         <li><%= link_to 'opinions', '#', class: "tweets" %></li>
