@@ -3,7 +3,7 @@
 > This project is a re-implementation of some of the features of twitter application.
 > A user can sign up with their photo, a signed in user can create posts, follow and unfollow another user.
 
-![Screenshot](https://user-images.githubusercontent.com/46329537/81774954-b1d16a80-94e3-11ea-94e2-99a5e5d70568.png)
+![tweet](https://user-images.githubusercontent.com/46329537/97231844-74843f00-17dc-11eb-8c8e-355b7c567d94.png)
 
 Additional description about the project and its features.
 
