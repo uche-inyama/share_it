@@ -30,7 +30,7 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[Live Demo Link](https://aqueous-reef-53418.herokuapp.com/)
+[Live Demo Link](https://gentle-headland-27526.herokuapp.com/)
 
 ## Getting Started
 
@@ -60,9 +60,6 @@ Open http://localhost:3000/ in your browser
 
     bundle exec rspec
 
-### Deployment:
-
-https://aqueous-reef-53418.herokuapp.com/
 
 ## Author
 
