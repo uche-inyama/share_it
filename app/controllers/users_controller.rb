@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   def new
     @user = User.new
     set_meta_tags og: {
-      image: '../assets/images/tweet.png',
+      image: 'https://unsplash.com/photos/OeXcIHFwtsM?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink',
     }
   end
 
