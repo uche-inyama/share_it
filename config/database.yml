@@ -23,10 +23,10 @@ default: &default
 
 development:
   <<: *default
-  host: db
+  # host: db
   database: share_it_develop
-  username: postgres
-  password: password123
+  # username: postgres
+  # password: password123
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -56,10 +56,9 @@ development:
 test:
   <<: *default
   database: share_it_test
-  host: db
-  database: share_it_develop
-  username: postgres
-  password: password123
+  # host: db
+  # username: postgres
+  # password: password123
 
 
 # As with config/credentials.yml, you never want to store sensitive information,
