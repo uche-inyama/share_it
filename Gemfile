@@ -61,3 +61,6 @@ gem "mini_magick"
 gem 'rspec-its'
 gem 'carrierwave'
 gem 'fog-aws'
+gem 'graphql'
+
+gem 'graphiql-rails', group: :development
