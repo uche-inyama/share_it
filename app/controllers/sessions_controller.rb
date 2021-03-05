@@ -6,10 +6,11 @@ class SessionsController < ApplicationController
     user = User.find_by(username: params[:session][:username].downcase)
     if user
       log_in user
+      flash[:success] = 'You have successfully signed in'
       redirect_to opinions_path
     else
-      flash.now[:danger] = 'Invalid email'
-      render 'new'
+      flash[:danger] = 'Invalid email'
+      redirect_to new_user_path
     end
   end
 

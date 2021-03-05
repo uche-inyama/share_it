@@ -19,7 +19,29 @@ services:
       - "5430:5432"
     volumes: 
       - "db-volume:/var/lib/postgresql/data"
+    # networks:
+    #   - psql-pgql
+  
+  graphql:
+    container_name: pgql
+    image: graphile/postgraphile
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgres://postgres:password123@db:5430/share_it_develop # To be moved to environment file
+    expose:
+      - 5000
+    ports:
+      - 5000:5000
+    command: [ "--connection", "postgres://postgres:password123@db:5432/share_it_develop", "--host", "0.0.0.0", "--port", "5000"]
+    links:
+      - db
+    # networks:
+    #   - psql-pgql
 
 volumes:
   db-volume:
   bundle-volume:
+
+# networks:
+#   psql-pgql:
