@@ -24,9 +24,13 @@ gem 'jbuilder', '~> 2.7'
 
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
+gem 'shrine', '~> 3.3'
+gem "shrine-cloudinary", "~> 1.1"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
+
+# gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -34,6 +38,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 4.0.0'
   gem 'factory_bot_rails'
   gem 'database_cleaner'
+  gem 'dotenv-rails'
 end
 
 group :development do

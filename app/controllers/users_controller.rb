@@ -15,6 +15,7 @@ class UsersController < ApplicationController
 
   def create 
     @user = User.new(user_params)
+    # debugger
     if @user.save
       log_in @user
       flash[:success] = "You have successfully signed up."
@@ -32,7 +33,7 @@ class UsersController < ApplicationController
   def following
     @users = @user.followed_user.paginate(page: params[:page])
     @view_type = 'following'
-    render  :show
+    render :show
   end
 
   def followers

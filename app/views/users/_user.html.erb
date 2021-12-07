@@ -1,6 +1,6 @@
 <div class = "following-follower">
   <section>
-    <%= image_tag(user.photo.url, class: "user_image") if user.photo? %>
+    <%= image_tag(user.photo.url, class: "user_image") if user.photo %>
     <%= user.fullname %>
   </section>
 </div>

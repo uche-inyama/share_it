@@ -1,61 +1,62 @@
 class User < ApplicationRecord
-    self.per_page = 10
-    mount_uploader :photo, PhotoUploader
-    mount_uploader :coverimage, CoverImageUploader
-    
-    validates :username, presence: true, length: { maximum: 50 }, uniqueness: true
-    validates :fullname, presence: true, uniqueness: true
-    validates :photo, presence: true
-    validates :coverimage, presence: true
+  self.per_page = 10
+  
+  include  PhotoUploader::Attachment(:photo)
+  include  PhotoUploader::Attachment(:coverimage)
+
+  validates :username, presence: true, length: { maximum: 50 }, uniqueness: true
+  validates :fullname, presence: true, uniqueness: true
+  validates :photo, presence: true
+  validates :coverimage, presence: true
 
 
-    has_many :followings, foreign_key: "follower_id", dependent: :destroy
-    has_many :followed_user, through: :followings, source: :followed
+  has_many :followings, foreign_key: "follower_id", dependent: :destroy
+  has_many :followed_user, through: :followings, source: :followed
 
-    has_many :reverse_followings, foreign_key: "followed_id", 
-                                  class_name: "Following",
-                                  dependent: :destroy
+  has_many :reverse_followings, foreign_key: "followed_id", 
+                                class_name: "Following",
+                                dependent: :destroy
 
-    has_many :followers, through: :reverse_followings, source: :follower
+  has_many :followers, through: :reverse_followings, source: :follower
 
-    has_many :opinions, foreign_key: 'author_id', class_name: 'Opinion'
+  has_many :opinions, foreign_key: 'author_id', class_name: 'Opinion'
 
-    def opinions_list
-        id_array = followings.map(&:followed_id) << id
-        Opinion.where(author_id: id_array)
-    end
+  def opinions_list
+    id_array = followings.map(&:followed_id) << id
+    Opinion.where(author_id: id_array)
+  end
 
-    def who_to_follow
-      id_array = followings.map(&:followed_id) << id
-      User.where.not(id: id_array).includes([:followed_user]).sample(3)
-    end
+  def who_to_follow
+    id_array = followings.map(&:followed_id) << id
+    User.where.not(id: id_array).includes([:followed_user]).sample(3)
+  end
 
-    def num_following
-        return 0 unless followed_user.any?
-        followed_user.count
-    end
-    
-      def num_followers
-        return 0 unless followers.any?
-        followers.count
-      end
-    
-      def num_opinions
-        return 0 unless opinions.any?
-        opinions.count
-      end
+  def num_following
+    return 0 unless followed_user.any?
+    followed_user.count
+  end
+  
+  def num_followers
+    return 0 unless followers.any?
+    followers.count
+  end
 
-      def following?(other_user)
-        followings.find_by(followed_id: other_user.id)
-      end
-    
-      def follow!(other_user)
-        followings.create!(followed_id: other_user.id)
-      end
+  def num_opinions
+    return 0 unless opinions.any?
+    opinions.count
+  end
 
-      def unfollow!(other_user)
-        followings.find_by(followed_id: other_user.id).destroy
-      end
+  def following?(other_user)
+    followings.find_by(followed_id: other_user.id)
+  end
+
+  def follow!(other_user)
+    followings.create!(followed_id: other_user.id)
+  end
+
+  def unfollow!(other_user)
+    followings.find_by(followed_id: other_user.id).destroy
+  end
 end
 
 
