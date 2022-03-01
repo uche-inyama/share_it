@@ -110,7 +110,7 @@ GEM
     factory_bot_rails (6.2.0)
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
-    ffi (1.15.4)
+    ffi (1.15.5)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
@@ -153,7 +153,7 @@ GEM
       ffi-compiler (>= 1.0, < 2.0)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
-    image_processing (1.12.1)
+    image_processing (1.12.2)
       mini_magick (>= 4.9.5, < 5)
       ruby-vips (>= 2.0.17, < 3)
     ipaddress (0.8.3)
@@ -337,7 +337,7 @@ DEPENDENCIES
   font_awesome5_rails
   graphiql-rails
   graphql
-  image_processing (~> 1.2)
+  image_processing (~> 1.12)
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
   mini_magick
