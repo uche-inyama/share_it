@@ -85,7 +85,7 @@ GEM
     cloudinary (1.21.0)
       aws_cf_signer
       rest-client (>= 2.0.0)
-    concurrent-ruby (1.1.9)
+    concurrent-ruby (1.1.10)
     content_disposition (1.0.0)
     crass (1.0.6)
     database_cleaner (2.0.1)
@@ -134,7 +134,7 @@ GEM
       nokogiri (>= 1.11.3)
       railties (>= 4.2)
     formatador (0.3.0)
-    globalid (1.0.0)
+    globalid (1.0.1)
       activesupport (>= 5.0)
     graphiql-rails (1.8.0)
       railties
@@ -151,7 +151,7 @@ GEM
     http-form_data (2.3.0)
     http-parser (1.2.3)
       ffi-compiler (>= 1.0, < 2.0)
-    i18n (1.8.11)
+    i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.1)
       mini_magick (>= 4.9.5, < 5)
@@ -177,7 +177,7 @@ GEM
     mini_magick (4.11.0)
     mini_mime (1.1.2)
     mini_portile2 (2.6.1)
-    minitest (5.14.4)
+    minitest (5.17.0)
     msgpack (1.4.2)
     multi_json (1.15.0)
     netrc (0.11.0)
@@ -296,7 +296,7 @@ GEM
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
-    tzinfo (1.2.9)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
     unf (0.1.4)
       unf_ext
@@ -320,7 +320,7 @@ GEM
     will_paginate (3.3.1)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.5.1)
+    zeitwerk (2.6.6)
 
 PLATFORMS
   ruby
